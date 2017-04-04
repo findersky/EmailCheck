@@ -1,0 +1,8 @@
+H:\gitWorkFloder\EmailCheck\EmailCheck\bin\Debug\EmailCheck.exe
+H:\gitWorkFloder\EmailCheck\EmailCheck\bin\Debug\EmailCheck.pdb
+H:\gitWorkFloder\EmailCheck\EmailCheck\obj\x86\Debug\EmailCheck.exe
+H:\gitWorkFloder\EmailCheck\EmailCheck\obj\x86\Debug\EmailCheck.pdb
+H:\gitWorkFloder\EmailCheck\obj\x86\Debug\EmailCheck.exe
+H:\gitWorkFloder\EmailCheck\obj\x86\Debug\EmailCheck.pdb
+H:\gitWorkFloder\EmailCheck\bin\Debug\EmailCheck.exe
+H:\gitWorkFloder\EmailCheck\bin\Debug\EmailCheck.pdb
