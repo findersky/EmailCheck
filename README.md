@@ -1,2 +1,2 @@
 # EmailCheck
-e-mail  check
+C# to achieve e-mail check
