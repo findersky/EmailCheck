@@ -87,7 +87,6 @@ namespace EmailCheck
         {
             try
             {
-
                 arrayToSend = Encoding.UTF8.GetBytes(command.ToCharArray());
                 s.Write(arrayToSend, 0, arrayToSend.Length);
                 len = s.Read(bb, 0, bb.Length);
@@ -109,23 +108,19 @@ namespace EmailCheck
         {
             this.sbMessage.Clear();
             Regex reg = new Regex(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
-
             if (!reg.IsMatch(mailAddress))
             {
                 //Email地址形式上就不对 
                 this.sbMessage.Append("邮件地址格式存在问题！\r\n");
                 return false;
             } 
-
             string mailServer = getMailServer(mailAddress);
-
             if (string.IsNullOrEmpty(mailServer))
             {
                 this.sbMessage.Append("邮件服务器不存在！\r\n");
                 return false;
                 //邮件服务器探测错误  
             }
-
             this.sbMessage.Append("解析出域名" + strDomain + "的mx记录：" + mailServer + "\r\n");
             tcpc = new TcpClient();      //为 TCP 网络服务提供客户端连接。  
             tcpc.NoDelay = true;
@@ -146,8 +141,7 @@ namespace EmailCheck
                {
                    return false;
                }
-               
-                //写入Mail From命令  
+               //写入Mail From命令  
                 stringTosend = "mail from:<" + fromEmail + ">" + "\r\n";
                 this.sbMessage.Append( "发送：" + stringTosend);
                 if (!SendCommand(stringTosend)) {
@@ -160,7 +154,7 @@ namespace EmailCheck
             }
             catch (Exception ee)
             {
-
+                this.sbMessage.Append(ee.Message+"\r\n");
             }
             return false;
         }

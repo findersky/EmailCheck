@@ -10,10 +10,16 @@ namespace EmailCheck
         static void Main(string[] args)
         {
             EmailCheckHelper emailCheck = new EmailCheckHelper();
+            string input = "";
             emailCheck.checkEmail("check1@verify-email.org");
             Console.WriteLine(emailCheck.ToString());
-            emailCheck.checkEmail("jenny@blackducksoftware.com");
-            Console.WriteLine(emailCheck.ToString());
+            Console.WriteLine("请输入电子邮件地址:");
+            while ((input = Console.ReadLine()) != "")
+            {
+                emailCheck.checkEmail(input);
+                Console.WriteLine(emailCheck.ToString());
+                Console.WriteLine("请输入电子邮件地址:");
+            }
             Console.Read();
         }
     }
