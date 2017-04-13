@@ -70,7 +70,7 @@ namespace EmailCheck
                 s = tcpc.GetStream();
                 len = s.Read(bb, 0, bb.Length);
                 read = Encoding.UTF8.GetString(bb);
-                if (read.StartsWith("220") == true)
+                if (read.StartsWith("220"))
                 {
                     this.sbMessage.Append("连接服务器成功！" + "\r\n");
                 }
