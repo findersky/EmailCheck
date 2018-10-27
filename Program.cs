@@ -11,7 +11,7 @@ namespace EmailCheck
         {
             EmailCheckHelper emailCheck = new EmailCheckHelper();
             string input = "";
-            emailCheck.checkEmail("check1@verify-email.org");
+            bool isSucess=emailCheck.checkEmail("check1@verify-email.org");
             Console.WriteLine(emailCheck.ToString());
             Console.WriteLine("请输入电子邮件地址:");
             while ((input = Console.ReadLine()) != "")
