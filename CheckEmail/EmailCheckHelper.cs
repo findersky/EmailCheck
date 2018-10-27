@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace EmailCheck
+namespace CheckEmail
 {
     public  class EmailCheckHelper
     {
